@@ -1,64 +1,113 @@
-body{
-    margin: 0;
-    padding: 0;
-    background: url(WallpaperDog-17110897.jpg) no-repeat;
-    background-size: cover;
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  background: url(WallpaperDog-17110897.jpg) no-repeat;
+  background-size: cover;
 }
 
 .box {
-    width: 450px; /* Set the desired width */
-    background-color: rgba(141, 14, 14, 0.612); /* Transparent black background (adjust the alpha value to change transparency) */
-    backdrop-filter: blur(5px); /* Apply a blur effect to the background */
-    padding: 40px;
-    text-align: center;
-    margin: auto;
-    margin-top: 5%;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-radius: 20px;
+  width: 450px; /* Set the desired width */
+  background-color: rgba(
+    141,
+    14,
+    14,
+    0.612
+  ); /* Transparent black background (adjust the alpha value to change transparency) */
+  backdrop-filter: blur(5px); /* Apply a blur effect to the background */
+  padding: 40px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 20px;
+}
+.box-img {
+  border-radius: 50%;
+  width: 195px;
+  height: 200px;
+}
+
+.box h1 {
+  font-size: 40px;
+  letter-spacing: 4px;
+  font-weight: 100;
+}
+
+.box h5 {
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+.box p {
+  text-align: justify;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.box li {
+  display: inline-block;
+  margin: 6px;
+  list-style: none;
+}
+
+.box li a {
+  color: white;
+  text-decoration: none;
+  font-size: 60px;
+  transition: all ease-in-out 250ms;
+}
+
+ul h5 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 768px) {
+  .box {
+    width: 90%; /* Adjust the width as needed */
+    padding: 20px;
+    font-size: 16px;
   }
-.box-img{
-    border-radius: 50%;
-    width: 195px;
-    height: 200px;
+
+  .box-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .box h1 {
+    font-size: 28px;
+  }
+
+  .box h5 {
+    font-size: 18px;
+  }
 }
 
-.box h1{
-    font-size: 40px;
-    letter-spacing: 4px;
-    font-weight: 100;
-}
+/* For screens between 768px and 1200px (tablets) */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .box {
+    width: 70%; /* Adjust the width as needed */
+    font-size: 18px;
+  }
 
-.box h5{
-    font-size: 20px;
-    letter-spacing: 3px;
-    font-weight: 100;
-}
+  .box-img {
+    width: 180px;
+    height: 180px;
+  }
 
-.box p{
-    text-align: justify;
-}
+  .box h1 {
+    font-size: 32px;
+  }
 
-ul{
-    margin: 0;
-    padding: 0;
-}
-
-.box li{
-    display: inline-block;
-    margin: 6px;
-    list-style: none;
-}
-
-.box li a{
-    color: white;
-    text-decoration: none;
-    font-size: 60px;
-    transition: all ease-in-out 250ms;
-}
-
-ul h5{
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  .box h5 {
+    font-size: 22px;
+  }
 }
