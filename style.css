@@ -24,7 +24,7 @@ body {
   border-radius: 20px;
 }
 .box-img {
-  border-radius: 60%;
+  border-radius: 50%;
   width: 195px;
   height: 200px;
 }
@@ -108,5 +108,151 @@ ul h5 {
 
   .box h5 {
     font-size: 22px;
+  }
+} /* ... (existing CSS rules) ... */
+
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 225, 0, 0.8);
+  }
+}
+
+.box h1 {
+  font-size: 30px;
+  letter-spacing: 5px;
+  font-weight: 100;
+  animation: glow 1.3s infinite;
+}
+
+/* ... (existing CSS rules) ... */
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 10% auto;
+  position: relative; /* Needed for positioning of the spans */
+}
+
+.container span {
+  position: absolute;
+  border-radius: 100vmax;
+}
+
+.top,
+.bottom,
+.right,
+.left {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+}
+
+.top {
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 50%,
+    rgba(255, 102, 0, 0.5),
+    /* Fire orange */ rgba(255, 204, 0, 0.5),
+    /* Lighter fire yellow */
+  );
+  animation: animateTop 5s ease-in-out infinite;
+}
+
+.bottom {
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 102, 0, 0.5),
+    /* Fire orange */ rgb(255, 51, 0) /* Darker fire red */ transparent 50%
+  );
+  animation: animateBottom 10s ease-in-out infinite;
+}
+
+.right {
+  top: 0;
+  right: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 30%,
+    rgba(255, 102, 0, 0.5),
+    /* Fire orange */ rgb(255, 51, 0) /* Darker fire red */
+  );
+  animation: animateRight 5s ease-in-out infinite;
+}
+
+.left {
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 102, 0, 0.5),
+    /* Fire orange */ rgba(255, 204, 0, 0.5),
+    /* Lighter fire yellow */ transparent 70%
+  );
+  animation: animateLeft 5s ease-in-out infinite;
+}
+
+@keyframes animateTop {
+  25% {
+    width: 100%;
+    opacity: 1;
+  }
+  30%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateBottom {
+  0%,
+  50% {
+    opacity: 0;
+    width: 0;
+  }
+  75% {
+    opacity: 1;
+    width: 100%;
+  }
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateRight {
+  0%,
+  25% {
+    opacity: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 1;
+    height: 100%;
+  }
+  55%,
+  100% {
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes animateLeft {
+  0%,
+  75% {
+    opacity: 0;
+    bottom: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 100%;
   }
 }

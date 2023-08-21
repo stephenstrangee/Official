@@ -11,15 +11,19 @@
     <div class="container">
         <div class="box">
             <img src="stephen.jpg_large" alt="Doctor Strange" class="box-img">
-            <h1>Stephen Strange</h1>
+            <h1>STEPHEN STRANGE</h1>
             <h5>Neurosurgeon - Sorcerer</h5>
-            <p>
+            <p id="typing-effect">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to Doctor Strange's Official Mystical Web Page!
                 <br>
                 <hr>
                 Join Doctor Stephen Strange, the Sorcerer Supreme, on an extraordinary journey through the boundless wonders of magic and mysticism. Uncover ancient secrets, witness the artistry of spells, and explore the enigmatic multiverse. Follow our official Instagram account <strong>@stephenstrangee</strong> for exclusive insights, captivating images, and magical adventures.
                 <hr>
                 Embrace the unknown, awaken your inner sorcerer, and experience a realm where reality transcends imagination. Step into the mystic world of Doctor Strange and let the magic unfold!</p>
+                <span class="top"></span>
+                <span class="right"></span>
+                <span class="bottom"></span>
+                <span class="left"></span>
             <ul>
                 <li><a href="http://www.instagram.com/stephenstrangee"><i class="fa-brands fa-instagram" style="color: #ffffff;" aria-hidden="true"></i></a></li>
                 <h6><i>@stephenstrangee</i></h6>
@@ -27,6 +31,27 @@
             </ul>
     </div>
         </div>
+
+<script>
+    const textElement = document.getElementById("typing-effect");
+    const text = textElement.textContent.trim();
+    textElement.textContent = "";
+
+    let charIndex = 0;
+    const interval = 100;
+
+    function typeText() {
+        if (charIndex < text.length) {
+            textElement.textContent += text.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeText, interval);
+        }
+    }
+
+    typeText();
+</script>
+</body>
+</html>
 
 </body>
 </html>
